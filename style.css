@@ -14,6 +14,9 @@ header {
   padding: 10px 18%;
   border-bottom: 1px solid rgba(219, 219, 219, 1);
   background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 header .logo {
@@ -196,4 +199,92 @@ section {
 }
 .right-side {
   width: 35%;
+  margin-top: 15px;
+  position: fixed;
+  right: 30px;
+}
+
+.right-side .profile-tittle {
+  display: flex;
+  align-items: center;
+}
+.right-side .profile-tittle .profile-left {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.right-side .profile-tittle .profile-left .images img {
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.right-side .profile-tittle .profile-left .details .name {
+  padding-bottom: 3px;
+}
+.right-side .profile-right p {
+  color: rgb(55, 27, 216);
+  font-weight: bold;
+}
+.suggestion {
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+.suggestion p {
+  margin-right: 90px;
+}
+.suggestion p:last-child {
+  margin-right: 0;
+}
+.suggestion-tittle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.suggestion-tittle .suggestion-left {
+  display: flex;
+  align-items: center;
+  margin-right: 60px;
+}
+.suggestion-tittle .suggestion-left .image img {
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+.suggestion-tittle .suggestion-left .details .name {
+  margin-bottom: 3px;
+}
+.suggestion-tittle .suggestion-right p {
+  color: rgb(55, 27, 216);
+  font-weight: bold;
+}
+
+/* media quaries*/
+
+@media (max-width: 1000px) {
+  header {
+    padding: 10px 20px;
+  }
+  section .left-side {
+    width: 100%;
+  }
+  section .right-side {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  header .search-box {
+    display: none;
+  }
+  section {
+    padding: 30px 20px;
+  }
+}
+@media (max-width: 550px) {
+  .story .stories {
+    width: 25%;
+  }
+  header nav ul li {
+    margin-right: 10px;
+  }
 }
